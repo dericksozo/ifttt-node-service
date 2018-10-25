@@ -1,0 +1,184 @@
+[{
+      "emoji":"\ud83d\ude04",
+      "id": 1,
+      "emotion":"Joy",
+      "color":"F4C811",
+      "text_color":"413504",
+      "question":"What actions did I take to put me into this state"
+   },
+   {
+      "emoji":"\ud83d\ude0c",
+      "id": 2,
+      "emotion":"Grateful",
+      "color":"5BE399",
+      "text_color":"163826",
+      "question":"What triggered this feeling of gratitude and how can I trigger it again"
+   },
+   {
+      "emoji":"\ud83d\ude0e",
+      "id": 3,
+      "emotion":"Arrogant",
+      "color":"6734F1",
+      "text_color":"1F1146",
+      "question":"What\u2019s a healthier way to meet my need for significance"
+   },
+   {
+      "emoji":"\ud83e\udd23",
+      "id": 4,
+      "emotion":"Funny",
+      "color":"F16E27",
+      "text_color":"341706",
+      "question":"What makes you laugh"
+   },
+   {
+      "emoji":"\ud83d\ude21",
+      "id": 5,
+      "emotion":"Angry",
+      "color":"F04235",
+      "text_color":"40110D",
+      "question":"What else could this mean and is it significant"
+   },
+   {
+      "emoji":"\ud83d\udcaa",
+      "id": 6,
+      "emotion":"Confident",
+      "color":"7A2EF1",
+      "text_color":"200A44",
+      "question":"How can I continue to extend this feeling"
+   },
+   {
+      "emoji":"\ud83d\ude30",
+      "id": 7,
+      "emotion":"Anxious",
+      "color":"150311",
+      "text_color":"FFFFFF",
+      "question":"What\u2019s one thing that I can be grateful about praise myself for right now"
+   },
+   {
+      "emoji":"\ud83d\ude1e",
+      "id": 8,
+      "emotion":"Down",
+      "color":"445EF1",
+      "text_color":"172054",
+      "question":"What would I have to believe to feel this way right now"
+   },
+   {
+       "emoji":"\ud83d\udc4a",
+       "id": 9,
+       "emotion":"In Control",
+       "color":"5CE372",
+       "text_color":"122C17",
+       "question":"What\u2019s the current state of things to make me feel this way"
+    },
+    {
+       "emoji":"\ud83d\ude4c",
+       "id": 10,
+       "emotion":"Motivated",
+       "color":"EC3751",
+       "text_color":"3D0D14",
+       "question":"What\u2019s a single thing that I can do right now to capture this motivation"
+    },
+    {
+       "emoji":"\ud83d\ude31",
+       "id": 11,
+       "emotion":"Fearful",
+       "color":"150311",
+       "text_color":"FFFFFF",
+       "question":"What\u2019s the best thing that could happen"
+    },
+    {
+       "emoji":"\ud83d\udc41",
+       "id": 12,
+       "emotion":"Focused",
+       "color":"484DF1",
+       "text_color":"10113C",
+       "question":"How can I plan my day in the future so that it continues to proceed like this"
+    },
+    {
+       "emoji":"\ud83d\udc7b",
+       "id": 13,
+       "emotion":"Ignored",
+       "color":"FFFFFF",
+       "text_color":"000000",
+       "question":"What else could this mean and what\u2019s an action I can take to move forward"
+    },
+    {
+       "emoji":"\ud83e\udd16",
+       "id": 14,
+       "emotion":"Apathetic",
+       "color":"A6A6A6",
+       "text_color":"000000",
+       "question":"What\u2019s one small thing that I can do for someone else to show that I care about them"
+    },
+    {
+       "emoji":"\ud83e\udd25",
+       "id": 15,
+       "emotion":"Used",
+       "color":"4B93F1",
+       "text_color":"172E4D",
+       "question":"How do you let people take advantage of you?"
+    },
+    {
+       "emoji":"\ud83e\udd20",
+       "id": 16,
+       "emotion":"Courageous",
+       "color":"F19D11",
+       "text_color":"312004",
+       "question":"What was the thing that caused me to push through and take action"
+    },
+    {
+       "emoji":"\ud83d\udc45",
+       "id": 17,
+       "emotion":"Horny",
+       "color":"F03177",
+       "text_color":"380A1B",
+       "question":"What\u2019s the healthiest way to satisfy this feeling"
+    },
+    {
+       "emoji":"\ud83e\udd22",
+       "id": 18,
+       "emotion":"Disgusted",
+       "color":"788311",
+       "text_color":"181B03",
+       "question":"How did you break your own values, and what\u2019s one thing you can do in the future to lessen the intensity of this feeling or avoid it"
+    },
+    {
+       "emoji":"\ud83d\udc76",
+       "id": 19,
+       "emotion":"Powerless",
+       "color":"56CBF1",
+       "text_color":"173A45",
+       "question":"What is it that I really want"
+    },
+    {
+       "emoji":"\ud83d\ude2b",
+       "id": 20,
+       "emotion":"Overwhelmed",
+       "color":"F3BA11",
+       "text_color":"413205",
+       "question":"What is one small thing that I can do right now to move forward"
+    },
+    {
+       "emoji":"\ud83d\ude29",
+       "id": 21,
+       "emotion":"Lethargic",
+       "color":"8F3711",
+       "text_color":"2B1004",
+       "question":"Can I drink one bottle of water"
+    },
+    {
+       "emoji":"\ud83d\ude14",
+       "id": 22,
+       "emotion":"Guilty",
+       "color":"6A6A6A",
+       "text_color":"000000",
+       "question":"What\u2019s one thing that I can listen to right now that will make me feel empowered"
+    },
+    {
+       "emoji":"\ud83d\ude16",
+       "id": 23,
+       "emotion":"Frustrated",
+       "color":"F04235",
+       "text_color":"40110D",
+       "question":"What are my other options"
+    }]
