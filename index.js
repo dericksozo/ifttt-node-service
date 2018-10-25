@@ -1,9 +1,24 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
+const db = require('./db.json');
 
-var db = require('db.json');
+// Alright, it's gonna be an API for hypothetical emotion tracking application.
+// /emotions
 
-// respond with "hello world" when a GET request is made to the homepage
-app.get('/', function (req, res) {
-  res.send('hello world')
+// Get all emotions
+// Get a specific emotion based on id
+// Get all emotions of a specific emotion id
+// Create a new emotion by POSTING.
+
+app.get('/api/v1/emotions', (req, res) => {
+  res.status(200).send({
+    success: 'true',
+    message: 'emotions retrieved successfully',
+    emotions: db
+  })
+});
+
+
+app.listen(3000, () => {
+  console.log("Listening on 3000");
 });
