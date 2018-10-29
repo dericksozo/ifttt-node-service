@@ -15,31 +15,46 @@ app.get('/api/v1/entries', (req, res) => {
 
   let hasEmotion = false;
   let emotionId = null;
-
   let entriesToSend = db["entries"];
 
   if (req.query.emotion) {
 
-    for (let i = 0; i < db["emotions"].length; i += 1) {
+    // Must be a string of length greater than 1.
+    if (typeof req.query.emotion !== "string" && req.query.emotion.length <= 0) {
 
-      console.log(db["emotions"][i]["emotion"].toLowerCase());
-      console.log(req.query.emotion);
+      res.status(404).send({
+        'message': 'Emotion must be given and a string'
+      });
 
-      if (db["emotions"][i]["emotion"].toLowerCase() === req.query.emotion) {
-        hasEmotion = true;
-        emotionId = db["emotions"][i]["id"];
-        break;
+    } else {
+
+      for (let i = 0; i < db["emotions"].length; i += 1) {
+
+        console.log(db["emotions"][i]["emotion"].toLowerCase());
+        console.log(req.query.emotion);
+
+        if (db["emotions"][i]["emotion"].toLowerCase() === req.query.emotion) {
+          hasEmotion = true;
+          emotionId = db["emotions"][i]["id"];
+          break;
+        }
       }
+
     }
 
+    // Emotion has to exist in the list of emotions or else a 404.
     if ( ! hasEmotion) {
+
       res.status(404).send({
-        'message': 'No emotion ' + req.query.emotion + ' exists'
+        'message': 'No emotion ' + req.query.emotion + ' exists. Run /api/v1/emotions to get a list of emotions.'
       });
+
     } else {
+
       entriesToSend = db["entries"].filter((item) => {
         return item["emotion_id"] === emotionId;
       });
+
     }
   }
 
