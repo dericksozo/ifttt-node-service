@@ -2,7 +2,14 @@ const express = require('express');
 const app = express();
 const db = require('./data/db.json');
 const bodyParser = require('body-parser');
+const faker = require('faker');
 
+let userGeneratedEntries = [];
+
+// support parsing of application/json type post data
+app.use(bodyParser.json());
+
+// Get the list of emotions
 app.get('/api/v1/emotions', (req, res) => {
   res.status(200).send({
     success: 'true',
@@ -11,6 +18,9 @@ app.get('/api/v1/emotions', (req, res) => {
   });
 });
 
+// Get individual entries
+// /api/v1/entries - Get all the entries
+// /api/v1/entries?emotion=${emotion} - To get specific entries for only certain emotions.
 app.get('/api/v1/entries', (req, res) => {
 
   let hasEmotion = false;
@@ -29,9 +39,6 @@ app.get('/api/v1/entries', (req, res) => {
     } else {
 
       for (let i = 0; i < db["emotions"].length; i += 1) {
-
-        console.log(db["emotions"][i]["emotion"].toLowerCase());
-        console.log(req.query.emotion);
 
         if (db["emotions"][i]["emotion"].toLowerCase() === req.query.emotion) {
           hasEmotion = true;
@@ -61,8 +68,49 @@ app.get('/api/v1/entries', (req, res) => {
   res.status(200).send({
     success: 'true',
     message: 'emotions retrieved successfully',
-    emotions: entriesToSend
+    emotions: userGeneratedEntries.length >= 1 ? [].concat(entriesToSend, userGeneratedEntries) : entriesToSend
   });
+
+});
+
+// Get a new entry
+app.post('/api/v1/entries', (req, res) => {
+  
+  let newEntry = {};
+
+  if (typeof req.body["emotion_id"] === "undefined") {
+    res.status(404).send({
+      message: "When creating a new entry, a valid emotion_id is required. Get valid emotion ids by running get request at /api/v1/emotions"
+    });
+  } else {
+
+    // Check if the emotion_id actually exists.
+    let found = db["emotions"].find(function (emotion) {
+      return emotion.id === req.body.emotion_id;
+    });
+
+    if (found == null) {
+      res.status(404).send({
+        message: "Not a valid emotion_id. Get valid emotion ids by running get request at /api/v1/emotions"
+      });
+    }
+
+    let newEntry = {
+      "emotion_id": req.body["emotion_id"],
+      "id": faker.random.uuid(),
+      "time": new Date(),
+      "note": req.body.note && typeof req.body.note === "string" && req.body.note.length >= 1 ? req.body.note : ""
+    };
+
+    userGeneratedEntries.push(newEntry);
+
+    res.status(200).send({
+      success: 'true',
+      message: 'entry successfully added',
+      entry: newEntry
+    });
+
+  }
 
 });
 
